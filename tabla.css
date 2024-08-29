@@ -1,0 +1,301 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+/* Estilos para la tabla */
+table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 100%; /* Ajusta el ancho de la tabla */
+}
+
+td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px; /* Reduce el relleno de las celdas */
+    font-size: 12px;
+    vertical-align: top;
+    position: relative; /* Permite posicionar elementos hijos */
+    border-radius: 8px; /* Bordes redondeados más pequeños */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Estilo para el número atómico */
+.atomic-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold;
+    background-color: #fff; /* Ajusta el color de fondo si es necesario */
+    padding: 2px;
+    border-radius: 50%;
+    width: 24px; /* Ajusta el tamaño del círculo */
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para el símbolo del elemento */
+.symbol {
+    margin-top: 18px; /* Ajusta el espaciado desde el número atómico */
+    font-size: 20px; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold;
+}
+
+/* Estilo para el nombre del elemento */
+.name {
+    margin-top: 4px; /* Ajusta el espaciado desde el símbolo */
+    font-size: 12px; /* Ajusta el tamaño según sea necesario */
+}
+
+/* Clases para colores de fondo */
+.metalalcalino { background-color: #244b55; }  /* Metales Alcalinos */
+.metaloide { background-color: #523e1b; }     /* Metaloides */
+.actinoides { background-color: #613b28; }      /* Actínidos */
+.metalalcalinoterreo { background-color: #622e39; } /* Metales Alcalinotérreos */
+.nometalreactivo { background-color: #2a4165; } /* No Metales Reactivos */
+.propiedadesdesconocidas { background-color: #46474c; } /* Propiedades Desconocidas */
+.metaltransicional { background-color: #433c65; } /* Metales de Transición */
+.gasnoble { background-color: #623842; }      /* Gases Nobles */
+.metalpostransicional { background-color: #2f4d47; } /* Metales Postransicionales */
+.lantanido { background-color: #2f4d47; }      /* Lantánidos */
+
+/* Clase para resaltar elementos */
+.highlight {
+    background-color: yellow; /* Cambia el color según prefieras */
+}
+
+
+/* Clases para colores de texto */
+.text_color_green { color: green; }
+.text_color_red { color: red; }
+.text_color_blue { color: blue; }
+
+/* Clase para celdas sin borde */
+.noBorder {
+    border: none;
+}
+
+/* Estilo para el título */
+.headingOne {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+/* Estilo para la tabla de elementos */
+.periodic-table {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilo para los elementos de la tabla */
+.element {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Color por defecto */
+    border: 1px solid #ccc;
+    border-radius: 12px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.element:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+}
+
+/* Estilo para la sección de clasificación */
+.classification {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 300px; /* Ajusta el ancho máximo de la sección */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-button {
+    display: block;
+    width: 100%;
+    padding: 8px; /* Reduce el relleno del botón */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    text-align: center;
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+}
+
+.classification-content {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Estilo para la tabla de clasificación */
+.classification-content table {
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+    border-collapse: collapse;
+}
+
+.classification-content td {
+    padding: 6px; /* Ajusta el relleno de las celdas */
+    font-size: 12px; /* Ajusta el tamaño del texto */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 6px; /* Bordes redondeados más pequeños */
+    background-color: #f9f9f9; /* Color de fondo de las celdas */
+}
+
+/* Estilo para la lista horizontal */
+.classification-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Cambia la lista a una disposición horizontal */
+    flex-wrap: wrap; /* Permite que los ítems se envuelvan si no caben en una línea */
+}
+
+.classification-content li {
+    display: flex;
+    align-items: center;
+    margin-right: 8px; /* Espaciado horizontal entre los ítems */
+    margin-bottom: 8px; /* Espaciado vertical entre las filas si hay más de una fila */
+}
+
+.classification-content button {
+    padding: 6px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.classification-content button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Colores de fondo de las opciones en la lista */
+.metalalcalino-button { background-color: #244b55; }
+.metaloide-button { background-color: #523e1b; }
+.actinoides-button { background-color: #613b28; }
+.metalalcalinoterreo-button { background-color: #622e39; }
+.nometalreactivo-button { background-color: #2a4165; }
+.propiedadesdesconocidas-button { background-color: #46474c; }
+.metaltransicional-button { background-color: #433c65; }
+.gasnoble-button { background-color: #623842; }
+.metalpostransicional-button { background-color: #2f4d47; }
+.lantanido-button { background-color: #2f4d47; }
+
+/* Colores de los cuadros de color */
+.color-swatch {
+    display: inline-block;
+    width: 20px; /* Ajusta el tamaño del cuadro de color */
+    height: 15px;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+
+.menu {
+    margin: 10px;
+}
+
+.toggle-button {
+    padding: 5px 10px;
+    background-color: #244b55;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.classification-content {
+    margin-top: 5px;
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.color-swatch {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+button {
+    padding: 5px 8px;
+    font-size: 12px;
+    max-width: 140px; /* Establece un ancho máximo para los botones */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto que se desborde */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto desbordado */
+}
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px; 
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

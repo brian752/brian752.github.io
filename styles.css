@@ -1,0 +1,309 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef;
+    color: #333;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40;
+    padding: 1em 2em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+/* Sección Hero */
+.hero {
+    position: relative;
+    background-image: url('https://eligeeducar.cl/content/uploads/2021/04/0001-19393817343-20210406-152452-0000.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 10em 2em;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3em;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.cta-button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 2em 3em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e55b00;
+    transform: scale(1.05);
+}
+
+/* Tarjetas de características */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 4em 2em;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4em;
+}
+
+.feature-card {
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 1.5em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.feature-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-card img {
+    width: 120px;
+    margin-bottom: 1em;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.feature-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 1em;
+}
+
+.feature-card a {
+    text-decoration: none; /* Evita subrayado en enlaces */
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para Matemáticas y Química */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 1em 2em;
+    color: #ecf0f1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 0.75em 5em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+
+/* Layout */
+.main-container {
+    display: flex;
+    padding: 2em;
+    margin-top: 80px; /* Ajusta para dejar espacio para el nav */
+}
+
+.sidebar {
+    position: fixed;
+    top: 80px; /* Ajusta para dejar espacio para el nav */
+    left: 0;
+    height: calc(100% - 80px); /* Ajusta la altura para el nav */
+    width: 250px;
+    background-color: #34495e;
+    padding: 1.5em;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    color: #ecf0f1;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.sidebar .dropdown-btn {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    background-color: #2c3e50;
+    border: none;
+    text-align: left;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #ecf0f1;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .dropdown-btn:hover {
+    background-color: #1abc9c;
+}
+
+.sidebar .dropdown-container {
+    display: none;
+    padding-left: 1em;
+}
+
+.sidebar .dropdown-container a {
+    display: block;
+    padding: 0.75em;
+    text-decoration: none;
+    color: #ecf0f1;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .dropdown-container a:hover {
+    background-color: #16a085;
+}
+
+/* Información del curso */
+.course-info {
+    margin-left: 270px; /* Ajuste para el menú lateral */
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .course-info {
+        margin-left: 220px;
+    }
+}
+
+/* Tema oscuro */
+.dark-mode {
+    background-color: #333;
+    color: #f0f4f8;
+}
+
+.dark-mode nav {
+    background-color: #2c3e50;
+}
+
+.dark-mode .sidebar {
+    background-color: #2c3e50;
+}
+
+.dark-mode .sidebar .dropdown-btn {
+    background-color: #1abc9c;
+}
+
+.dark-mode .sidebar .dropdown-container a:hover {
+    background-color: #16a085;
+}
+
+.dark-mode .hero {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .cta-button {
+    background-color: #e67e22;
+}
+
+.dark-mode .cta-button:hover {
+    background-color: #d35400;
+}

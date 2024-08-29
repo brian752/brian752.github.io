@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Interactivos</title>
+    <link rel="stylesheet" href="exams.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="exams.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Plataforma de Aprendizaje</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="cta-button">Inicio</a></li>
+        </ul>
+    </nav>
+
+    <section class="course-info">
+        <h1>Ejercicios Interactivos</h1>
+        <p>Pon a prueba tus conocimientos con nuestros cuestionarios.</p>
+        <button id="start-matematicas" class="cta-button">Iniciar Examen de Matemáticas</button>
+        <button id="start-quimica" class="cta-button">Iniciar Examen de Química</button>
+    </section>
+
+    <section id="exam-container" class="hidden">
+        <h2 id="exam-title"></h2>
+        <form id="exam-form">
+            <div id="question-container"></div>
+            <button type="submit" id="finish-exam" class="cta-button">Finalizar Examen</button>
+        </form>
+        <div id="result" class="hidden"></div>
+    </section>
+</body>
+</html>
